@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc5a34a59bc5db429f85365ce72438c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SERVER_ADDRESS: localhost/django_test
+  SERVER_ADDRESS: http://202.143.198.111/game/
   operationButton: {fileID: 1861755960}
   questionText: {fileID: 292506124}
   resultText: {fileID: 29721698}

@@ -15,7 +15,8 @@ using UnityEngine.EventSystems;
 
 public class Main : MonoBehaviour
 {
-    public string SERVER_ADDRESS = "localhost/django_test";
+    public string SERVER_ADDRESS = "http://202.143.198.111/game/";
+    // public string SERVER_ADDRESS = "http://192.168.11.13/game/";
 
     [System.Serializable]
     private class SendDataJson
@@ -47,16 +48,13 @@ public class Main : MonoBehaviour
     }
     Mode mode = Mode.Start;
 
-    [DllImport("__Internal")]
-    private static extern string GetLocalStorage(string key);
-
     private string GetUserName()
     {
         string userName = "";
 
         if (CheckWebGLPlatform())
         {
-             userName = GetLocalStorage("user_name");
+            userName = HttpCookie.GetCookie("user_name");
         }
         return userName;
     }
